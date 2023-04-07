@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="scripts.js">
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">notifications</span>
+          <span class="material-icons-outlined">email</span>
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">filter_drama</span> Lunch
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">dinner_dining</span>Restaurante
+            </a>
+          </li>
+          <hr/>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">inventory</span>Inevntario
+            </a>
+          </li>
+          <hr/>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">storefront</span> Proveedores
+            </a>
+          </li>
+          <hr/>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">local_shipping</span> Pedidos
+            </a>
+          </li>
+          <hr/>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">poll</span> Reporte
+            </a>
+          </li>
+          <hr/>
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">settings</span> Configuracion
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <h2>LUNCH</h2>
+        </div>
+
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>MENU</h3>
+              <span class="material-icons-outlined">restaurante</span>
+            </div>
+            <h4>-Entradas</h4>
+            <h4>-Bebidas</h4>
+            <h4>-Carnes</h4>
+            <h4>-Postres</h4>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>COMEDOR</h3>
+              <span class="material-icons-outlined">table_restaurant</span>
+            </div>
+            <h3>MESA #5</h3>
+            <h3>MESA #3</h3>
+            <h3>MESA #11</h3>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>CLIENTE</h3>
+              <span class="material-icons-outlined">people</span>
+            </div>
+            <h1>150</h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>DOMICILIOS</h3>
+              <span class="material-icons-outlined">delivery_dining</span>
+            </div>
+            <h1>56</h1>
+          </div>
+
+        </div>
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <h2 class="chart-title">Total ventas</h2>
+            <h1 class="chart-title">545.000</h1>
+            <div id="bar-chart"></div>
+          </div>
+
+        </div>
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts.js"></script>
+  </body>
+</html>
