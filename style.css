@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+
+
+:root{
+    --azul:#053F70;
+    --naranja:#FF9800;
+    --blanco:#fff;
+    --fuente:'Nunito', sans-serif;
+}
+html{
+    box-sizing: border-box;
+}
+
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuente);
+    background-color: #053F70;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+    border-radius: 4px;
+}
+.contenedor-formulario{
+    display: flex;
+}
+.imagen-formulario{
+    background-image: url('img1.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 100px;
+    flex: 0 0 calc(60%);
+    position: relative;
+}
+.imagen-formulario::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(141,169,196,.5), rgba(19,64,116,.5) );
+}
+
+
+@media(min-width:768px){
+    .imagen-formulario{
+        height: auto;
+        background-position: right;
+    }
+}
+@media(min-width:1200px){
+    .imagen-formulario{
+        height: auto;
+        background-position: center;
+    }
+}
+@media(min-width:768px){
+    .imagen-formulario{
+        display: flex;
+    }
+}
+
+.formulario{
+    padding: 50px;
+    background-color: #fff;
+}
+
+.titulo-formulario h1, input, label, .pasword-olvidada, a, .titulo-formulario, .formulario-registro{
+    color: var(--azul)
+}
+.titulo-formulario h1{
+    font-size: 40px;
+    text-align: center;
+}
+.titulo-formulario p{
+    font-size: 22px;
+    text-align: center;
+}
+
+.input label{
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.pasword-olvidada a{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 22px;
+}
+.registrarse a{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 22px;
+}
+.formulario-registro{
+    width: 400px;
+    background: var(--blanco);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: var(--fuente);
+    color: var(--azul);
+    box-shadow: 7px 13px 37px #000;
+}
+.formulario-registro h2{
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+
+
+}
+.controls {
+    width: 100%;
+    background: var(--blanco);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid var(--azul);
+    font-family: 'nunito';
+    font-size: 18px;
+
+}
+
+.formulario-registro p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+
+}
+.formulario-registro a{
+    color: var(--azul);
+    text-decoration: line-throught;
+}
+.formulario-registro a:hover{
+    color: var(--naranja);
+    text-decoration: line-throught;
+}
+
+.formulario-registro button{
+    color: var(--azul)
+
+}
+.input input[type="submit"]{
+    background-color: var(--azul);
+    color: var(--blanco);
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px
+}
+
+.input input{
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input input[type="submit"]{
+    background-color: var(--azul);
+    color: var(--blanco);
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px
+}
+
+.input input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: var(--naranja);
+    transition: background-color .5s ease-in-out;
+}
